@@ -1,0 +1,57 @@
+.carousel {
+  margin: 30px 80px;
+  background-color: #fff;
+}
+
+.text{
+  width: 250px;
+  border: 1px solid #6291c1;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  margin-right: 10px;
+  text-indent: 10px;
+}
+
+.search{
+  padding: 0 80px;
+  width: 800px;
+}
+
+.selectAll{
+  margin-left: 30px;
+  margin-right: 5px;
+}
+
+.page{
+  text-align: right;
+  margin-top: 20px;
+}
+
+.select{
+  width: 100px;
+  border: 1px solid #6291c1;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  margin-right: 10px;
+}
+
+.tableDiv{
+  padding: 0 80px 40px 80px;
+}
+
+.delete{
+  color: #ef3c41;
+  cursor: pointer;
+}
+
+.choose{
+  color: #4a8116;
+  cursor: pointer;
+}
+
+.addCompany{
+  background-color: #eab531;
+  color: #000;
+}

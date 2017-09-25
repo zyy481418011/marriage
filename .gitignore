@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Cordova
+cszk/platforms/
+cszk/plugins/
+cszk/www/
+inspection/platforms/
+inspection/plugins/
+inspection/www/
+www/
+
+# npm
+node_modules/
+npm-debug.log
+
+# cordova-hot-code-push
+.chcpenv
+
+# idea
+.idea/*

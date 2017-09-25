@@ -1,0 +1,24 @@
+.banner {
+    width: 100%;
+    margin: 0;
+    padding: 30px 80px;
+    z-index: 1;
+}
+
+.menu{
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    background-color: #fff;
+    height: 660px;
+    overflow: hidden;
+}
+
+.bannerRight{
+    width: 75%;
+    min-height: 500px;
+    float: left;
+    margin: 0 0 20px 20px;
+    background-color: #fff;
+    overflow-x: hidden;
+}
