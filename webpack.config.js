@@ -4,13 +4,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const __PROD__ = process.env.NODE_ENV === 'production';
+const __PROD_DB__ = process.env.DB === 'production';
 const __DEV__ = !__PROD__;
-
 const define = {
+  __DEV__: JSON.stringify(__DEV__),
   __PROD__: JSON.stringify(__PROD__),
+  // 是否内嵌调试工具
   __DEVTOOLS__: JSON.stringify(__DEV__),
+  // React等库通过process.env.NODE_ENV变量判断是否运行于生产环境。
+  'process.env': {
+    NODE_ENV: JSON.stringify(__PROD__ ? 'production' : 'development')
+  },
   // 后台Api地址
-  __API_BASE__: JSON.stringify('localhost:8000')
+  __API_BASE__: JSON.stringify(
+    __PROD_DB__ ? 'http://101.200.51.147:8080' : 'http://47.95.49.71/api'
+  )
 };
 // __dirname是node.js中的一个全局变量，它指向当前执行脚本所在的目录
 module.exports = {
@@ -48,7 +56,7 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|png|gif|svg|xlsx)$/i,
+        test: /\.(jpe?g|png|gif|svg|xlsx|eot|woff|woff2|ttf|svg)$/i,
         loader: 'file-loader'
       },
       {

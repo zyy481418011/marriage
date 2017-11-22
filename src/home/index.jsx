@@ -42,6 +42,12 @@ class Home extends React.Component {
     }
   }
   clickHandler(path, title, mod, event){
+    console.log('event:',event.target.parentNode.childNodes)
+    let elements = event.target.parentNode.childNodes;
+    for (let i = 0; i < elements.length; i++) {
+      console.log(elements[i].className);
+      // elements[i].className =
+    }
     this.setState({
       title,
       mod1: false,
